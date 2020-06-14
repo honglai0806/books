@@ -1,0 +1,13 @@
+p{
+    color: white;
+    margin: 0px;
+}
+.footer{
+    background-color: black;
+    padding: 15px 0;
+    width: 100%;
+}
+.footer > div{
+    max-width: 65%;
+    margin: 0 auto;
+}

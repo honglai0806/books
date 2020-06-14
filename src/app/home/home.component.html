@@ -1,0 +1,77 @@
+<div class="main home-page"style="padding: 100px 0px;">
+  <div>
+    <div >
+      <h1 class="center">THỰC ĐƠN</h1>
+    </div>
+    <div class="mar-t">
+      <ul class="center">
+        <li style="background-color: #4c39d8; color: white;">Hôm nay</li>
+        <li>Cơm phần</li>
+        <li>Đồ ăn</li>
+        <li>Đồ uống</li>
+      </ul>
+    </div>
+  </div>
+  <div class="display-flex container">
+    <div class="row">
+      <div class="col-sm-3 mar-t"  *ngFor="let item of lists" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box" (click)="showPopup(item)">
+          <div>
+            <img src="{{ item.img }}" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">{{ item.name }}</p>
+            <p class="card-type">{{ item.type }}</p>
+            <p class="card-price">{{ item.price | currency: 'VND'}}</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<div class="modal fade" id="staticBackdrop"  data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" *ngIf='selectedItem'>
+      <div class="modal-body">
+        <div class="center">
+          <div class="left">
+            <img src="{{selectedItem.img}}" alt="">
+          </div>
+          <div class="right"> 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="content">
+              <div class="card-body">
+                <div>
+                  <p class="card-title">{{selectedItem.name}}</p>
+                  <p class="card-type">{{selectedItem.type}}</p>
+                  <p class="card-type">Giá</p>
+                  <p class="card-price">{{selectedItem.price | currency: 'VND'}}</p>
+                </div>
+                <div>
+                  <p>Số lượng</p>
+                  <div class="row">
+                    <div class="col col-md-2"> 
+                      <div class="btn btn-light" (click)="giam()">-</div>
+                    </div>
+                    <div class="col col-md-2 ">
+                      <div style="text-align: center; padding-top: 50%;">{{selectedItem.count}}</div>
+                    </div>
+                    <div class="col col-md-2"> 
+                      <div class="btn btn-light" (click)="tang()">+</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mar-t">
+                  <button type="button" class="btn btn-primary btn-sm active"data-dismiss="modal" aria-label="Close" (click)="addItem(selectedItem)">THÊM VÀO GIỎ HÀNG</button>
+                </div> 
+              </div>     
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

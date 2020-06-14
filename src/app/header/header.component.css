@@ -1,0 +1,40 @@
+header {
+    background-color: #4C39D8;
+    padding: 8px;
+}
+.logo>h2 {
+    color: white;
+    padding: 0;
+}
+nav a {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 10px  0 !important;
+}
+.logo {
+    flex: 20%;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu > a {
+    font-size: 14px;
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.size-icon{
+    font-size: 25px;
+}
+a:hover{
+    border-bottom: 1px solid white;
+
+}
