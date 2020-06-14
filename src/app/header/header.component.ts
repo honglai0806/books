@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
+  lists = [];
+  constructor() { 
+    this.lists = JSON.parse(localStorage.getItem('item'))|| [];
+  }
   ngOnInit(): void {
   }
+totalCount(){
+let total=0;
+this.lists.forEach(e => {
+  total+=e.count
+});
+return total;
+console.log(total);
 
+}
 }

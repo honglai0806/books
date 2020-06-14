@@ -6,10 +6,24 @@ header {
     color: white;
     padding: 0;
 }
+nav{
+    position: relative;
+}
 nav a {
     color: white;
     position: relative;
     text-decoration: none;
+}
+span{
+    color: white;
+    position: absolute;
+    top: 12px;
+    right: -8px;
+    font-size: x-small;
+    padding: 1px 4px 0px 4px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: red;
 }
 .navbar {
     display: flex;

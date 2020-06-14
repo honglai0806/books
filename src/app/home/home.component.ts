@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   lists: Product[];
   constructor() {
     this.lists = (data as any).default;
+    console.log("======list=========");
+    
     console.log(this.lists);
   }
   ngOnInit(): void {}

@@ -16,13 +16,13 @@
                 </div>
             </div>
             <div class="wrapper-box p-1">
-                <p class="border-bottom p-3">Đơn hàng của bạn</p>
-                <div class="box p-3" *ngFor='let item of lists'>
+                <p class=" p-3">Đơn hàng của bạn</p>
+                <div class="box p-3 border-top " *ngFor='let item of lists'>
                     <div class="wrapper">
                         <div class="img-product mr-3">
-                            <img class="img-thumbnail" src="{{item.img}}" alt="img">
+                            <img  src="{{item.img}}" alt="img">
                         </div>
-                        <div class="content">
+                        <div class="content mrg-l">
                             <p>{{item.name}}</p>
                             <p>{{item.price | currency: 'VND'}}</p>
                         </div>

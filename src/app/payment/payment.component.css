@@ -96,4 +96,12 @@ p{
 .color{
     background-color: #4C39D8;
 }
+img{
+    width: 80px;
+    height: 80px;
+   
+}
+.mrg-l{
+    margin-left: 25px;
+}
 
