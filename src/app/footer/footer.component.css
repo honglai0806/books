@@ -3,11 +3,23 @@ p{
     margin: 0px;
 }
 .footer{
-    background-color: black;
-    padding: 15px 0;
+    background-color: #4196c2;
+    padding: 10px 0;
     width: 100%;
+    
 }
 .footer > div{
     max-width: 65%;
     margin: 0 auto;
+}
+#templatemo_footer {
+	clear: both;
+	padding: 20px 0px 20px 0;
+	text-align: center;
+	color: #999;
+}
+
+#templatemo_footer a{
+	color: #fff;
+	font-weight: normal;
 }

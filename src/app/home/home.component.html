@@ -1,72 +1,195 @@
-<div class="main home-page"style="padding: 100px 0px;">
-  <div>
-    <div >
-      <h1 class="center">THỰC ĐƠN</h1>
-    </div>
-    <div class="mar-t">
-      <ul class="center">
-        <li style="background-color: #4c39d8; color: white;">Hôm nay</li>
-        <li>Cơm phần</li>
-        <li>Đồ ăn</li>
-        <li>Đồ uống</li>
-      </ul>
-    </div>
-  </div>
+<!-- <div class="logo">
+  <img src="../../assets/image/header_about.png" alt="">
+  
+</div> -->
+<div >
+<div class="logo">
+  <img src="../../assets/image/person-read-book.png" style="width: 250px;height: 200px; margin-left: 20px; margin-top: 5px;" alt="">
+  <i class="text1">“Để những cuốn sách, những tri thức không còn nằm im trên giá</i>
+  <i class="text2"> để những người đọc có thể kết nối với nhau.”</i>
+</div>
+<div class="main home-page" style="padding: 0px 0px;">
   <div class="display-flex container">
     <div class="row">
-      <div class="col-sm-3 mar-t"  *ngFor="let item of lists" data-toggle="modal" data-target="#staticBackdrop">
-        <div class="box" (click)="showPopup(item)">
+      <div class="col-sm-3 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box">
           <div>
-            <img src="{{ item.img }}" alt="" />
+            <img src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="" />
           </div>
           <div class="card-body">
-            <p class="card-title">{{ item.name }}</p>
-            <p class="card-type">{{ item.type }}</p>
-            <p class="card-price">{{ item.price | currency: 'VND'}}</p>
+            <p class="card-title">name</p>
+            <p class="card-type">details</p>
+            <p class="card-note">Đăng bởi:</p>
           </div>
         </div>
-        
+      </div>
+      <div class="col-sm-3 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box">
+          <div>
+            <img src="../../assets/image/Những-cuốn-sách-hay-nhất-viết-về-tình-yêu-4.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">name</p>
+            <p class="card-type">details</p>
+            <p class="card-note">Đăng bởi:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box">
+          <div>
+            <img src="../../assets/image/sach1.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">name</p>
+            <p class="card-type">details</p>
+            <p class="card-note">Đăng bởi:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box">
+          <div>
+            <img src="../../assets/image/sach2.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">name</p>
+            <p class="card-type">details</p>
+            <p class="card-note">Đăng bởi:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box">
+          <div>
+            <img src="../../assets/image/dca59ebbc2cd28e00bb867b17a0f54fcb79c137a.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">name</p>
+            <p class="card-type">details</p>
+            <p class="card-note">Đăng bởi:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+        <div class="box">
+          <div>
+            <img src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">name</p>
+            <p class="card-type">details</p>
+            <p class="card-note">Đăng bởi:</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-<div class="modal fade" id="staticBackdrop"  data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content" *ngIf='selectedItem'>
-      <div class="modal-body">
-        <div class="center">
-          <div class="left">
-            <img src="{{selectedItem.img}}" alt="">
-          </div>
-          <div class="right"> 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="content">
-              <div class="card-body">
-                <div>
-                  <p class="card-title">{{selectedItem.name}}</p>
-                  <p class="card-type">{{selectedItem.type}}</p>
-                  <p class="card-type">Giá</p>
-                  <p class="card-price">{{selectedItem.price | currency: 'VND'}}</p>
-                </div>
-                <div>
-                  <p>Số lượng</p>
-                  <div class="row">
-                    <div class="col col-md-2"> 
-                      <div class="btn btn-light" (click)="giam()">-</div>
-                    </div>
-                    <div class="col col-md-2 ">
-                      <div style="text-align: center; padding-top: 50%;">{{selectedItem.count}}</div>
-                    </div>
-                    <div class="col col-md-2"> 
-                      <div class="btn btn-light" (click)="tang()">+</div>
-                    </div>
+</div>
+  <!-- popup -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="center">
+            <div class="left">
+              <img src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
+            </div>
+            <div class="right">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="content">
+                <div class="card-body">
+                  <div>
+                    <p class="card-title">title</p>
+                    <p class="card-type">details</p>
+                    <p class="card-note">note</p>
+                    <p class="card-price">Price</p>
+                  </div>
+                  <div class="mar-t">
+                    <button type="button" class="btn btn-primary btn-sm active" data-dismiss="modal"
+                      aria-label="Close">TRAO ĐỔI SÁCH</button>
                   </div>
                 </div>
-                <div class="mar-t">
-                  <button type="button" class="btn btn-primary btn-sm active"data-dismiss="modal" aria-label="Close" (click)="addItem(selectedItem)">THÊM VÀO GIỎ HÀNG</button>
-                </div> 
-              </div>     
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- review books -->
+<div class="work">
+  <div class="MuiContainer">
+    <p class="text-work">“Mình là GÁC, việc của mình là…”</p>
+    <div class="main home-page" style="padding: 50px 0px;">
+      <div class="display-flex container">
+        <div class="row">
+          <div class="col-sm-6 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="box">
+              <div class="card-body" style="background-color: white;">
+                <p class="card-title " style="font-weight: bold;font-family: 'Times New Roman';font-size: 20px;">Mượn
+                  sách giấy miễn phí</p>
+                <p class="card-type" style="font-size: 16px;color: black;">"Tủ sách của mỗi người dùng là một nguồn sách
+                  miễn phí để chia sẻ với cộng đồng khu vực họ sinh sống và làm việc."</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="box">
+              <div class="card-body" style="background-color: white;">
+                <p class="card-title" style="font-weight: bold;font-family: 'Times New Roman';font-size: 20px;">Tủ sách
+                  online</p>
+                <p class="card-type" style="font-size: 16px;color: black;">"Mỗi tài khoản trên GAT sẽ là một tủ sách
+                  online giúp bạn quản lí những cuốn sách bạn đang có trên kệ. Có GAT ở đây, bạn không còn phải lo thất
+                  lạc sách nữa rồi!"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="box">
+              <div class="card-body" style="background-color: white;">
+                <p class="card-title" style="font-weight: bold;font-family: 'Times New Roman';font-size: 20px;">So sánh
+                  giá sách</p>
+                <p class="card-type" style="font-size: 16px;color: black;">"Tính năng so sánh giá sách thông minh sẽ
+                  giúp bạn tìm được trang web bán sách với giá cả hợp lý nhất."</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="box">
+              <div class="card-body" style="background-color: white;">
+                <p class="card-title" style="font-weight: bold;font-family: 'Times New Roman';font-size: 20px;">Review
+                  sách</p>
+                <p class="card-type" style="font-size: 16px;color: black;">"Bài viết review sách trên GAT là địa chỉ
+                  đáng tin cậy giúp bạn tham khảo và tìm kiếm được những cuốn sách hay."</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="box">
+              <div class="card-body" style="background-color: white;">
+                <p class="card-title" style="font-weight: bold;font-family: 'Times New Roman';font-size: 20px;">Khám phá
+                  Bookstop</p>
+                <p class="card-type" style="font-size: 16px;color: black;">"Các điểm Bookstop trên khắp cả nước là các
+                  thư viện, tủ sách cộng đồng, các quán cafe sách… nơi có lượng sách lớn cùng không gian cố định tới tất
+                  cả mọi người."</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mar-t" data-toggle="modal" data-target="#staticBackdrop">
+            <div class="box">
+              <div class="card-body" style="background-color: white;">
+                <p class="card-title" style="font-weight: bold;font-family: 'Times New Roman';font-size: 20px;">Group
+                  Cộng đồng GÁC trên Facebook</p>
+                <p class="card-type" style="font-size: 16px;color: black;">"Có gần 10.000 thành viên là nơi mọi người
+                  cùng nhau chia sẻ về những lần mượn sách trên GÁC, thông tin tủ sách cá nhân, trao đổi những thông tin
+                  thú vị về sách."</p>
+              </div>
             </div>
           </div>
         </div>
@@ -74,4 +197,4 @@
     </div>
   </div>
 </div>
-</div>
+

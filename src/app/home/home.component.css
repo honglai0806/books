@@ -2,7 +2,30 @@
     max-width: 65%;
     margin: 0 auto;
 }
-
+.logo {
+    position: relative;
+    color: rgb(104, 98, 98);
+    font-size: 24px;
+    font-weight: bold;
+    justify-content: center;
+    justify-items: center;
+    word-spacing: 14px;
+    background: rgba(178, 241, 248, 0.075);
+}
+.text1{
+    position: absolute;
+    top: 65px;
+    left: 380px;
+    font-family:Lucida Grande;
+   
+}
+.text2{
+    position: absolute;
+    top: 120px;
+    left: 480px;
+    font-family: Lucida Grande;
+   
+}
 .main {
     position: relative;
 }
@@ -10,27 +33,6 @@
     display: flex;
     justify-content: center;
     justify-items: center;
-}
-ul li{
-    list-style-type: none;
-    border-radius: 50px;
-    background-color: #efeded88;
-    margin-left: 30px;
-    width: 125px;
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    font-size: 14px; 
-}
-li a{
-    text-decoration: none;
-}
-ul li:hover{
-    background-color: #4C39D8;
-    color: white;
-}
-.define-color{
-    background-color: #4C39D8;
 }
 .mar-t{
     margin-top: 20px;
@@ -57,20 +59,13 @@ img{
     height: 175px;
 }
 .card-type{
-    color: gray;
+    color: #666;
     font-size: 13px;
 }
-.card-price{
-    color: #4C39D8;
+.card-note{
+    color:rgb(163, 154, 154);
     font-size: 16px;
     font-weight: bolder;
-
-}
-.showPopup{
-   height: 30%;
-   width: 65%;
-   margin: 0 auto;
-   margin-top: 10%;
 
 }
 .left{
@@ -85,3 +80,25 @@ img{
 .content{
     padding: 0 50px;
 }
+.work{
+font-size: 16px;
+font-family: 'Playfair Display', serif;
+color: #001a39;
+background-color: #edf8fe;
+}
+.text-work{
+    font-family: 'Playfair Display', serif;
+    color: #001a39;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 39px 0px 0px 0px;
+    padding-top: 50px;
+    /* margin-top: 50px; */
+}
+.info{
+    
+}
+

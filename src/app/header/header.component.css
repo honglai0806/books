@@ -1,18 +1,11 @@
 header {
-    background-color: #4C39D8;
-    padding: 8px;
+    background-color: #dcf1fd;
+    padding: 0px;
+    
 }
 .logo>h2 {
-    color: white;
+    color: #5FA1D3;
     padding: 0;
-}
-nav{
-    position: relative;
-}
-nav a {
-    color: white;
-    position: relative;
-    text-decoration: none;
 }
 span{
     color: white;
@@ -40,15 +33,20 @@ span{
     align-items: center;
 }
 .menu > a {
-    font-size: 14px;
-    color: white;
-    margin-left: 30px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: none;
     text-decoration: none;
+    margin-left: 30px;
+    color: #4196c2;
 }
 .size-icon{
     font-size: 25px;
 }
 a:hover{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #4196c2;
 
+}
+.logo img{
+    height: 50px;
 }

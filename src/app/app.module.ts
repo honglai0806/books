@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { PaymentComponent } from './payment/payment.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PostBookComponent } from './post-book/post-book.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PaymentComponent } from './payment/payment.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    PaymentComponent
+    SearchComponent,
+    PageNotFoundComponent,
+    PostBookComponent
   ],
   imports: [
     BrowserModule,
