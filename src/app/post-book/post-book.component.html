@@ -3,7 +3,7 @@
         <img src="../../assets/image/header_about.png" alt="" style=" width: 100%;
     height: 350px;">
         <div>
-            <div class="img"></div>
+            <div><img class="img" src="../../assets/image/default-user.png" alt=""></div>
         </div>
 
     </div>
@@ -14,77 +14,115 @@
                     <h4 class="h4">Giới thiệu</h4>
                     <p style="text-align: center;">Trần Thị Minh Xuân</p>
                 </div>
+                <hr style="width: 80%;margin-left: 40px;">
                 <div>
-                    <p class="p">User: <span style="color: blue;"></span></p>
+                    <!-- <p class="p">User: <span style="color: blue;"></span></p> -->
                     <p class="p">Sống tại: <span style="color: blue;">Thành Phố Hồ Chí Minh</span></p>
                     <p class="p">Đến từ: <span style="color: blue;">Bình Định</span></p>
                     <p class="p">Đã tham gia từ: <span style="color: blue;">Tháng 6 năm 2020</span></p>
                 </div>
             </div>
+            <button class="edit">Chỉnh sửa chi tiết</button>
 
         </div>
+
         <div class="line" style="margin-left: 2%;">
 
         </div>
+
         <div class="right1">
-            <div class="create">
-                <div class="post">
-                    <p>Tạo bài viết</p>
+            <div class="create-post">
+                <div class="create" style="height: 44px;">
+                    <div>
+                        <p><i class="fas fa-pencil-alt"></i> Tạo bài viết</p>
+                    </div>
+                    <div class="linegroup"></div>
+                    <div class="postImg">
+                        <p><i class="fas fa-camera"></i> Ảnh/Video</p>
+                    </div>
                 </div>
-                <div class="linegroup"></div>
-                <div class="postImg">
-                    <p>Ảnh/Video</p>
+                <div class="content" data-toggle="modal" data-target="#staticBackdrop">
+                    <div class="avata">
+                        <img src="../../assets/image/default-user.png" alt="">
+                    </div>
+                    <div>
+                    
+                        <p style="padding-left: 10px;color: gray;">Đăng bài...</p>
+                    </div>
                 </div>
             </div>
-            <div class="content" data-toggle="modal" data-target="#staticBackdrop">
-                <div class="avata">
-                    <!-- img -->
+
+            <div class="selected">
+                <i>
+                    <h6 style="padding-top: 5px;">Bài viết</h6>
+                </i>
+                <div><i class="fas fa-tasks"></i> Quản lý bài viết</div>
+                <div><i class="far fa-list-alt"></i> Chế độ xem danh sách</div>
+                <div><i class="fas fa-book-open"></i> Book</div>
+            </div>
+            <div>
+                <div class="post box">
+                    <div class="left">
+                        <img class="img-thumbnail" src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="body-text">
+                            <h5 class="card-title">Tên cuốn sách</h5>
+                            <p class="card-type">details</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="mar-t">
+                            <div><i class="fas fa-pencil-alt"></i></div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p style="padding-left: 10px;">Đăng bài...</p>
+                <div class="post">
+                    <div class="left">
+                        <img class="img-thumbnail" src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
+                    </div>
+                    <div class="center">
+                        <div class="body-text">
+                            <h5 class="card-title">Tên cuốn sách</h5>
+                            <p class="card-type">details</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="mar-t">
+                            <div><i class="fas fa-pencil-alt"></i></div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div class="info">
-
             </div>
-
-            <hr />
-            <!-- popup -->
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-                role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="center">
-                                <div class="left">
-                                    <img src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <div class="content">
-                                        <div class="card-body">
-                                            <div>
-                                                <p class="card-title">title</p>
-                                                <p class="card-type">details</p>
-                                                <p class="card-note">note</p>
-                                                <p class="card-price">Price</p>
-                                            </div>
-                                            <div class="mar-t">
-                                                <button type="button" class="btn btn-primary btn-sm active"
-                                                    data-dismiss="modal" aria-label="Close">TRAO ĐỔI SÁCH</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+    </div>
+</div>
+<!-- popup -->
+<!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="create-post">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="content" data-toggle="modal" data-target="#staticBackdrop">
+                        <div class="avata">
+                            <img src="../../assets/image/default-user.png" alt="">
+                        </div>
+                        <div>
+                            <p style="padding-left: 10px;color: gray;">Đăng bài...</p>
+                        </div>
+                        <div>
+                            <input type="text">
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end -->
         </div>
-       
     </div>
-</div>
+</div> -->

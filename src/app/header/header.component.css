@@ -37,9 +37,13 @@ span{
     font-family: 'Open Sans', sans-serif !important;
     text-transform: none;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 25px;
     color: #4196c2;
 }
+ .menu i{
+     font-size: 30px;
+     margin-right: 8px;
+ }
 .size-icon{
     font-size: 25px;
 }
@@ -49,4 +53,7 @@ a:hover{
 }
 .logo img{
     height: 50px;
+}
+.post{
+    margin-top: 20px;
 }

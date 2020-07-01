@@ -1,7 +1,7 @@
 .mainUser{
     max-width: 65%;
     margin: 0 auto;
-    height: 900px;
+    height: auto;
 }
 .imageUser{
     background-color: #fff;
@@ -21,12 +21,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
    
 }
+.left1 > button{
+    margin-bottom: 0px;
+}
 .right1{
+    
     width: 60%;
-    height: 400px;
+    /* height: 400px; */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     /* z-index: 500;	 */
+    margin-bottom: 30px;
 }
 .line{
     margin-left: 2%;
@@ -37,14 +42,15 @@
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* z-index: 500;	 */
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     bottom: 18px;
     left: 19px;
     
 }
 .img:hover{
-    background-color: #000;
+    /* background-color: #000; */
     opacity: 0.6;
 }
 .imgHeader{
@@ -55,7 +61,7 @@
     border: 1px solid #d0d0d0;
     height: 45px;
     width: 100%;
-    background-color: #d0d0d0;
+    background-color: #c6e4f9;
     display: flex;
     justify-content: space-evenly;
 }
@@ -71,11 +77,10 @@ p{
     margin-left: 5%;
 }
 .avata{
-    width: 9%;
+    width: 10%;
     height: 50px;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .h4{
     text-align: center;
@@ -86,7 +91,7 @@ p{
     padding-left: 20px;
 }
 /* popup */
-.center{
+.center-popup{
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -113,7 +118,7 @@ img{
     
 }
 .box >div:nth-child(1){
-    height: 175px;
+    height: auto;
 }
 .card-type{
     color: #666;
@@ -132,7 +137,7 @@ img{
     width: 50%;
 }
 .modal-body{
-    padding: 0;
+    padding: 0px 10px;
 }
 .nofi{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);	
@@ -140,3 +145,60 @@ img{
     height: 200px;
     border-radius: 4px;
 }
+.img-thumbnail{
+    width: 85% !important;
+    height: auto;
+    margin-left: 10%;
+
+}
+.post{
+    display: flex;
+   /* margin-top: 10px; */
+   padding-top: 20px;
+   padding-bottom: 15px;
+}
+.post > .left{
+    width: 25%;
+}
+.post > .center{
+    width: 65%;
+}
+.post > .right{
+    width: 10%;
+}
+h5{
+  font-weight: bold;
+    
+}
+
+.create-post{
+    /* margin-bottom: 10px; */
+    height: 200px;
+}
+.selected{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-top: 1px solid  rgb(227, 221, 221);
+}
+.selected div{
+    border:1px solid black;
+    border-radius: 7px;
+    padding: 3px;
+    cursor: pointer;
+}
+.edit{
+    height: 38px;
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: #f7f5f5;
+    border: 1px solid rgb(227, 221, 221);
+ margin-top: 80px;
+    text-align: center;
+}
+.button-close{
+    font-size: 20px;
+}
+
+
