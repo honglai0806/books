@@ -41,7 +41,7 @@
                         <p><i class="fas fa-camera"></i> Ảnh/Video</p>
                     </div>
                 </div>
-                <div class="content" data-toggle="modal" data-target="#staticBackdrop">
+                <div class="content" data-toggle="modal" data-target="#post">
                     <div class="avata">
                         <img src="../../assets/image/default-user.png" alt="">
                     </div>
@@ -60,9 +60,12 @@
                 <div><i class="far fa-list-alt"></i> Chế độ xem danh sách</div>
                 <div><i class="fas fa-book-open"></i> Book</div>
             </div>
+
+            <!-- detail-post -->
             <div>
-                <div class="post box">
-                    <div class="left">
+               <div style="margin-top: 2.5%;">
+                <div  class="post box">
+                    <div class="left" data-toggle="modal" data-target="#staticBackdrop">
                         <img class="img-thumbnail" src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
                     </div>
                     <div class="center">
@@ -75,10 +78,15 @@
                         <div class="mar-t">
                             <div><i class="fas fa-pencil-alt"></i></div>
                         </div>
+                        <div class="mar-t" data-toggle="modal" data-target="#deleteModal" >
+                            <div><i class="far fa-trash-alt"></i></div>
+                        </div>
                     </div>
                 </div>
-                <div class="post">
-                    <div class="left">
+               </div>
+               <div style="margin-top: 2.5%;">
+                <div  class="post box"  >
+                    <div class="left" data-toggle="modal" data-target="#staticBackdrop">
                         <img class="img-thumbnail" src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
                     </div>
                     <div class="center">
@@ -91,8 +99,12 @@
                         <div class="mar-t">
                             <div><i class="fas fa-pencil-alt"></i></div>
                         </div>
+                        <div class="mar-t" data-toggle="modal" data-target="#deleteModal" >
+                            <div><i class="far fa-trash-alt"></i></div>
+                        </div>
                     </div>
                 </div>
+               </div>
 
             </div>
             <div class="info">
@@ -100,29 +112,162 @@
         </div>
     </div>
 </div>
+
+
 <!-- popup -->
-<!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+<div class="modal fade popup_detail" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="center">
+        <div class="left">
+          <img src="../../assets/image/Dien-thoai-nay-dung-chung-nhe.jpg" alt="">
+        </div>
+        <div class="right">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="content">
+            <div class="card-body">
+              <div>
+                <p class="card-title">title</p>
+                <p class="card-type">details</p>
+                <p class="card-note">note</p>
+                <p class="card-price">Price</p>
+              </div>
+              <div class="mar-t">
+                <button type="button" class="btn btn-primary btn-sm active" data-dismiss="modal"
+                  aria-label="Close">TRAO ĐỔI SÁCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- popup-post -->
+<div class="modal fade" id="post" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content" style="    width: 80%;
+        height: 580px;
+        margin-left: 12%;">
             <div class="modal-body">
-                <div class="create-post">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div>
+                    <div>
+                        <h3 class="h3">Tạo bào viết</h3>
+                    </div>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        style="    margin-top: -5%;">
                         <span aria-hidden="true">&times;</span>
                     </button>
+                </div>
+
+
+                <hr>
+                <div class="create-post">
                     <div class="content" data-toggle="modal" data-target="#staticBackdrop">
-                        <div class="avata">
+                        <div class="avata1">
                             <img src="../../assets/image/default-user.png" alt="">
                         </div>
                         <div>
-                            <p style="padding-left: 10px;color: gray;">Đăng bài...</p>
+                            <p style="padding-left: 10px;color: #000;">Trần Thị Minh Xuân</p>
                         </div>
-                        <div>
-                            <input type="text">
+
+                    </div>
+                    <div>
+                        <div class="main">
+                            <p class="hinhAnh">Hình ảnh: </p>
+                            <div class="imgPost">
+                                <img src="../../assets/image/dropzone.svg" alt="" style="width: 30%; height: 50px;    margin-left: 33%;
+                               " />
+                                <input type="file" style="margin-left: 20%;" />
+                                <p class="click">Click chuột để đăng hình hoặc kéo thả vào đấy <br /> có thể đăng nhiều
+                                    hình cùng lúc
+                                </p>
+
+
+                            </div>
+
                         </div>
+                        <div class="input-group mb-3" style="margin-top: 5%;">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Tên sách</label>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Tên tác giả</label>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Năm sản xuất</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">1990</option>
+                                <option value="2">1990</option>
+                                <option value="3">1990</option>
+                            </select>
+                        </div>
+                        <div class="main">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Thể loại</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Giá</label>
+                                </div>
+                                <input type="number" class="form-control" placeholder="Username" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dang">
+                        <p style="text-align: center; color:#fff;">Đăng</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
+</div>
+<!-- popup_detele -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn chắc chắn muốn xóa bài viết này chứ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
